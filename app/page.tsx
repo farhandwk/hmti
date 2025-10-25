@@ -1,9 +1,11 @@
 // app/page.tsx
 'use client';
 
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Users, Calendar, Award, BookOpen, Mail, Instagram, Twitter, Facebook, ArrowRight, Target, Lightbulb, Heart } from 'lucide-react';
+import logo from "@/app/src/logo.png"
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,12 +65,18 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">HM</span>
+              <div className="w-12 h-12 bg-none from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <Image
+                src={logo}
+                alt="Deskripsi Gambar"
+                width={500}
+                height={300}
+              />
               </div>
               <div>
-                <h1 className={`font-bold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>HIMA TEKNIK</h1>
-                <p className={`text-xs ${scrolled ? 'text-gray-600' : 'text-gray-200'}`}>Universitas Indonesia</p>
+                <h1 className={`font-bold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>HMTI</h1>
+                <h1 className={`font-bold text-x ${scrolled ? 'text-gray-900' : 'text-white'}`}>Cakra Abipaya</h1>
+                <p className={`text-xs ${scrolled ? 'text-gray-600' : 'text-gray-200'}`}>Universitas Teknologi Yogyakarta</p>
               </div>
             </Link>
 
@@ -118,7 +126,7 @@ export default function HomePage() {
                 <span className="text-yellow-300">Masa Depan Gemilang</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-100 mb-8">
-                Himpunan Mahasiswa Teknik Informatika, wadah aspirasi dan pengembangan mahasiswa
+                Himpunan Mahasiswa Teknik Industri, wadah aspirasi dan pengembangan mahasiswa
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Link href="/departments" className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 inline-flex items-center justify-center">
