@@ -104,7 +104,7 @@ export default function HomePage() {
               <Link href="#about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Tentang</Link>
               <Link href="/departments" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Departemen</Link>
               <Link href="#events" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Kegiatan</Link>
-              <Link href="/teams" className={`font-medium transition-colors ${scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}>Teams</Link>
+              <Link href="/teams" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Team</Link>
               <Link href="#contact" className="block px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded text-center">Hubungi Kami</Link>
             </div>
           </div>
