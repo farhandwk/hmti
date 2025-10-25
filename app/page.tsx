@@ -61,17 +61,18 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navbar */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg' : 'bg-transparent'}`}>
+      {/* DIUBAH: Menambahkan 'bg-white/30 backdrop-blur-lg shadow-md' pada kondisi scrolled */}
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/30 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-none from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Image
-                src={logo}
-                alt="Deskripsi Gambar"
-                width={500}
-                height={300}
-              />
+                  src={logo}
+                  alt="Deskripsi Gambar"
+                  width={500}
+                  height={300}
+                />
               </div>
               <div>
                 <h1 className={`font-bold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>HMTI</h1>
@@ -95,7 +96,8 @@ export default function HomePage() {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden bg-white shadow-lg">
+          // DIUBAH: Mengganti 'bg-white' dengan 'bg-white/30 backdrop-blur-lg'
+          <div className="md:hidden bg-white/30 backdrop-blur-lg shadow-lg">
             <div className="px-4 pt-2 pb-4 space-y-2">
               <Link href="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Beranda</Link>
               <Link href="#about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded">Tentang</Link>
@@ -178,12 +180,11 @@ export default function HomePage() {
             <div className="order-1 md:order-2">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Tentang Kami</h2>
               <p className="text-gray-600 mb-4 text-lg leading-relaxed">
-                Himpunan Mahasiswa Teknik Informatika adalah organisasi kemahasiswaan yang bergerak dalam bidang pengembangan soft skill dan hard skill mahasiswa.
+                HMTI adalah sebuah organisasi mahasiswa di bawah naungan program studi 
+Teknik Industri di Universitas Teknologi Yogyakarta. Organisasi ini dibentuk untuk 
+mewadahi aspirasi, kegiatan akademik, maupun non-akademik mahasiswa Teknik 
+Industri.
               </p>
-              <p className="text-gray-600 mb-6 text-lg leading-relaxed">
-                Kami berkomitmen untuk menciptakan lingkungan yang kondusif bagi mahasiswa untuk berkembang, berinovasi, dan berkontribusi kepada masyarakat.
-              </p>
-              
               <div className="grid grid-cols-3 gap-6 mt-8">
                 <div className="text-center p-4 bg-blue-50 rounded-xl">
                   <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
